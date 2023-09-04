@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.template import Template, context
 from datetime import datetime
 
 def saludo (request):
@@ -26,3 +27,12 @@ def dia_de_hoy (request):
 def saluda_con_nombre (request,nombre):
     saludo = f"Hola {nombre}"
     return HttpResponse (saludo)
+
+# Funcion para invocar templates. No olvidar de Importar las clases al comienzo de las views con: from django.template import Template,context
+def invoca_template (request):
+    mihtml = open("G:\Mi unidad\Phyton\Entregas\Entrega3\mi_entrega\mysite\mysite\Templates\template1.html") #Abre el archivo del template
+    plantilla = Template(mihtml.read()) # es una instancia de la clase template donde leemos lo que esta en a variable anterior
+    mihtml.close() #es una buena practica cerrar la conexion con el html
+    miContexto = context()
+    documento = plantilla.render(miContexto)
+    return HttpResponse (documento)

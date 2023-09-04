@@ -20,8 +20,9 @@ class Encuestas(models.Model):
         default='nulo',  # Establece 'nulo' como valor por defecto
     )
 
-        Pregunta2 = models.CharField(
-        max_length=10,
-        choices=OPCIONES,
-        default='nulo',  # Establece 'nulo' como valor por defecto
+    Pregunta2 = models.CharField(
+            max_length=10,
+            choices=OPCIONES,
+            default='nulo',  # Establece 'nulo' como valor por defecto
     )
+

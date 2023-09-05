@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path #
 from .views import *
 
 from mysite.views import saludo, prueba, dia_de_hoy,saluda_con_nombre,invoca_template

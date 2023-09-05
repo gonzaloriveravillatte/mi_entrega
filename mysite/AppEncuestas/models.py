@@ -2,6 +2,11 @@ from django.db import models
 
 # Create your models here.
 
+class Entrevistadores(models.Model):
+    nombre = models.CharField(max_length=40)
+    apellido = models.CharField(max_length=40)
+   
+
 class Entrevistados(models.Model):
     nombre = models.CharField(max_length=40)
     hombre = models.BooleanField(default=False)

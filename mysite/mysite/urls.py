@@ -27,4 +27,5 @@ urlpatterns = [
     path("fecha/", dia_de_hoy),
     path("saluda-nombre/<nombre>", saluda_con_nombre), # el /<name> es el parametro que le voy a pasar (viene de la funcion), que lo pongo directo en la url. Si quiero invocar esta funcion debere escribir la url/name
     path("probando-template/", invoca_template),
+    path('app-encuestas/', include('AppEncuestas.urls'))
 ]
